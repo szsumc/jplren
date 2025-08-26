@@ -6,132 +6,132 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jp L・REN株式会社</title>
   <style>
-    /* 重置默认样式，方便统一控制 */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+/* 重置默认样式，方便统一控制 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      color: #333;
-      background-color: #F4F4F4;
-    }
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #F4F4F4;
+}
 
-    /* 顶部导航及横幅区域，宽度100%，背景色按需求设置 */
-    .top-section {
-      width: 100%;
-      background-color: #18594A; /* 近似顶部绿色，可按需调整 */
-    }
+/* 顶部导航及横幅区域，宽度100%，背景色按需求设置 */
+.top-section {
+  width: 100%;
+  background-color: #18594A; /* 近似顶部绿色，可按需调整 */
+}
 
-    .top-nav {
-      width: 960px; /* 假设内容宽度固定，可根据实际需求调整，实现居中 */
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-    }
+/* 将 .top-nav 和 .content-wrapper 的固定宽度改为最大宽度 */
+.top-nav {
+  max-width: 960px; /* PC端最大宽度 */
+  width: 100%; /* 手机端宽度100% */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
 
-    .top-nav a {
-      color: #fff;
-      text-decoration: none;
-      padding: 10px 15px;
-      display: inline-block;
-    }
+.top-nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: inline-block;
+}
 
-    .current{
-      border-bottom: 2px solid #D2D04F; /* 下划线样式，这里用金色示例 */
-    }
+.current{
+  border-bottom: 2px solid #D2D04F;
+}
 
-    .banner {
-      width: 100%;
-      background-color: #F4F4F4; /* 横幅灰色背景 */
-      text-align: center;
-    }
+.banner {
+  width: 100%;
+  background-color: #F4F4F4;
+  text-align: center;
+}
 
-    /* 主体内容区域，居中显示 */
-    .content-wrapper {
-      width: 960px;
-      margin: 20px auto;
-      display: flex;
-    }
+/* 主体内容区域，居中显示 */
+.content-wrapper {
+  max-width: 960px; /* PC端最大宽度 */
+  width: 100%; /* 手机端宽度100% */
+  margin: 20px auto;
+  display: flex;
+}
 
-    .sidebar {
-      width: 178px;
-      margin-right: 20px;
-    }
+.sidebar {
+  width: 178px;
+  margin-right: 20px;
+}
 
-    .sidebar .contact-box {
-      background-color: #fff;
-      border: 1px solid #666666;
-      margin-bottom: 20px;
-    }
+.sidebar .contact-box {
+  background-color: #fff;
+  border: 1px solid #666666;
+  margin-bottom: 20px;
+}
 
-    .sidebar .contact-box p {
-      margin-bottom: 5px;
-    }
+.sidebar .contact-box p {
+  margin-bottom: 5px;
+}
 
-    .side-top {
-      padding: 10px;
-      background-color: #18594A;
-      color: #fff;
-    }
+.side-top {
+  padding: 10px;
+  background-color: #18594A;
+  color: #fff;
+}
 
-    .side-contents-top {
-      padding: 10px 0PX 0PX 10PX;
-   font-size: 21px;
+.side-contents-top {
+  padding: 10px 0PX 0PX 10PX;
+  font-size: 21px;
+}
 
-    }
+.side-contents {
+  padding: 10px;
+  font-size: 14px;
+}
 
-    .side-contents {
-      padding: 10px;
-      font-size: 14px;
-    }
+.contents-banner {
+  margin: 10px 0px 10px 0px;
+  padding: 5px 0px 5px 10px;
+  background-color: #D2D04F;
+}
 
-    .contents-banner {
-      margin: 10px 0px 10px 0px;
-      padding: 5px 0px 5px 10px;
-      background-color: #D2D04F;
-    }
+.main-div {
+  background-color: #ffffff;
+  border-top: 2px solid #666666;
+  padding: 10px;
+}
 
+.main-content {
+  flex: 1;
+}
 
-    .main-div {
-      background-color: #ffffff; 
-     border-top: 2px solid #000;
-     border-top-color: #666666;
-     padding: 20px;
-    }
+.main-content h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
 
-    .main-content {
-      flex: 1;
-    }
+.img-placeholder {
+  width: 100%;
+}
 
-    .map-div {
-      margin: 20px 0px 0px 0px;
-      border: 1px solid #000;
-    }
+.text-section {
+  margin-bottom: 20px;
+}
 
-    .main-content h2 {
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
+.bottom-section {
+  width: 100%;
+  background-color: #18594A;
+  text-align: center;
+  padding: 10px 0;
+  color: #fff;
+  font-size: 12px;
+}
 
-    .img-placeholder {
-      width: 100%;
-    }
-
-    .text-section {
-      margin-bottom: 20px;
-    }
-
-    .bottom-section {
-      width: 100%;
-      background-color: #18594A; /* 底部绿色背景，与顶部呼应 */
-      text-align: center;
-      padding: 10px 0;
-      color: #fff;
-      font-size: 12px;
-    }
+.image-container img {
+  width: 100%;
+  height: auto;
+}
 
 
   .row {
@@ -162,6 +162,48 @@
       vertical-align: top;
   }
 
+
+
+/* 在这里添加媒体查询，实现响应式布局 */
+@media (max-width: 768px) {
+  .top-nav,
+  .content-wrapper {
+    padding: 0 10px; /* 添加左右内边距，防止内容紧贴屏幕边缘 */
+    flex-wrap: wrap; /* 允许子元素换行 */
+  }
+
+  /* 导航栏在手机上垂直排列 */
+  .top-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* 主体内容和侧边栏在手机上垂直排列 */
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%; /* 侧边栏宽度100% */
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .main-content {
+    width: 100%; /* 主要内容宽度100% */
+  }
+
+  /* .row 下的列在手机上垂直排列 */
+  .row {
+    flex-direction: column;
+  }
+
+  .col {
+    width: 100%; /* 每列宽度100% */
+  }
+}
+
+
   </style>
 </head>
 
@@ -176,7 +218,7 @@
       <a href="contact.html">お問い合わせ</a>
     </div>
     <div class="banner">
-      <div class="img-placeholder"><img src="images/banner1.jpg"/></div>
+      <div class="image-container"><img src="images/banner1.jpg"/></div>
     </div>
   </div>
 
