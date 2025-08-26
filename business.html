@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jp L・REN株式会社</title>
+  <style>
+    /* 重置默认样式，方便统一控制 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+      background-color: #F4F4F4;
+    }
+
+    /* 顶部导航及横幅区域，宽度100%，背景色按需求设置 */
+    .top-section {
+      width: 100%;
+      background-color: #18594A; /* 近似顶部绿色，可按需调整 */
+    }
+
+    .top-nav {
+      width: 960px; /* 假设内容宽度固定，可根据实际需求调整，实现居中 */
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+    }
+
+    .top-nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 15px;
+      display: inline-block;
+    }
+
+    .current{
+      border-bottom: 2px solid #D2D04F; /* 下划线样式，这里用金色示例 */
+    }
+
+    .banner {
+      width: 100%;
+      background-color: #F4F4F4; /* 横幅灰色背景 */
+      text-align: center;
+    }
+
+    /* 主体内容区域，居中显示 */
+    .content-wrapper {
+      width: 960px;
+      margin: 20px auto;
+      display: flex;
+    }
+
+    .sidebar {
+      width: 178px;
+      margin-right: 20px;
+    }
+
+    .sidebar .contact-box {
+   background-color: #fff;
+   border: 1px solid #666666;
+      margin-bottom: 20px;
+    }
+
+    .sidebar .contact-box p {
+      margin-bottom: 5px;
+    }
+
+    .side-top {
+      padding: 10px;
+   background-color: #18594A;
+   color: #fff;
+    }
+
+    .side-contents-top {
+      padding: 10px 0PX 0PX 10PX;
+   font-size: 21px;
+
+    }
+
+    .side-contents {
+      padding: 10px;
+   font-size: 14px;
+    }
+
+    .contents-banner {
+      margin: 10px 0px 10px 0px;
+      padding: 5px 0px 5px 10px;
+      background-color: #D2D04F;
+    }
+
+
+    .main-div {
+      background-color: #ffffff; 
+     border-top: 2px solid #000;
+     border-top-color: #666666;
+     padding: 10px;
+    }
+
+    .main-content {
+      flex: 1;
+    }
+
+    .main-content h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .img-placeholder {
+      width: 100%;
+    }
+
+    .text-section {
+      margin-bottom: 20px;
+    }
+
+    .bottom-section {
+      width: 100%;
+      background-color: #18594A; /* 底部绿色背景，与顶部呼应 */
+      text-align: center;
+      padding: 10px 0;
+      color: #fff;
+      font-size: 12px;
+    }
+
+        .box {
+            display: flex;
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0px 0px 40px 0px;
+        }
+        .box img {
+            width: 167px;
+            height: 111px;
+        }
+        .text {
+            flex: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .box {
+                flex-direction: column;
+            }
+            .box img {
+                width: 100%;
+            }
+        }
+  </style>
+</head>
+
+<body>
+  <!-- 顶部区域 -->
+  <div class="top-section">
+    <div class="top-nav">
+            <img src="images/logo.jpg"/>
+      <a href="index.html">ホーム</a>
+      <a href="aboutus.html">会社概要</a>
+      <a class="current" href="business.html">業務紹介</a>
+      <a href="contact.html">お問い合わせ</a>
+    </div>
+    <div class="banner">
+      <div class="img-placeholder"><img src="images/banner1.jpg"/></div>
+    </div>
+  </div>
+
+  <!-- 主体内容区域 -->
+  <div class="content-wrapper">
+    <!-- 侧边栏 -->
+    <aside class="sidebar">
+      <div class="contact-box">
+        <div class="side-top">
+          <p>お問い合わせ</p>
+        </div>
+        <div class="side-contents-top">
+          <p>✆ 047-192-6728</p>
+        </div>
+        <div class="side-contents">
+          <p>〒272-854</p>
+          <p>千葉県栢市布瀬字原市 15-1
+(栢しょうなん夢ファーム前)</p></br>
+          <p>FAX 047-192-6729</p>
+          <p>携帯 080-1234-5678</p></br>
+          <p>受付時間 9:00～18:00（土日祝除く）</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 主要内容 -->
+    <main class="main-content">
+            <div class="main-top-div">
+        <h2>業務紹介</h2>
+            </div>
+            <div class="main-div">
+      <div class="text-section">
+        <div class="contents-banner">
+          <p><b>金属廃棄物回収</b></p>
+        </div>
+        <div class="box">
+            <img src="images/top-pic1.jpg">
+            <div class="text">
+                <p>不要な金属を回収し、資源として再利用します。環境に優しく、持続可能な社会に貢献。迅速対応、安心価格で承ります。</p>
+            </div>
+        </div>
+          
+        <div class="contents-banner">
+          <p><b>金属溶接・加工</b></p>
+        </div>
+        <div class="box">
+            <img src="images/top-pic2.jpg">
+            <div class="text">
+                <p>専門的な技術で金属を溶接・加工します。複雑な形状や精密な部品も、高品質な仕上がりを実現。お客様の多様なニーズに応え、一貫生産でサポートします。</p>
+            </div>
+        </div>
+        <div class="contents-banner">
+          <p><b>建築解体工事</b></p>
+        </div>
+        <div class="box">
+            <img src="images/top-pic3.jpg">
+            <div class="text">
+                <p>専門知識と技術で、安全・迅速な建築解体を実現します。アスベスト除去から産業廃棄物処理まで一貫対応。周辺環境に配慮し、安心してお任せいただけます。</p>
+            </div>
+        </div>
+        <div class="contents-banner">
+          <p><b>配車業務</b></p>
+        </div>
+        <div class="box">
+            <img src="images/top-pic4.jpg">
+            <div class="text">
+                <p>多様な車両と熟練のドライバーで、お客様の物流を力強くサポート。目的地まで安全・迅速に、最適な配車プランをご提案します。コスト削減にも貢献し、効率的な業務を実現します。</p>
+            </div>
+        </div>
+      </div>
+
+      </div>
+            </div>
+    </main>
+  </div>
+
+  <!-- 底部区域 -->
+  <div class="bottom-section">
+    <p>Copyright © 2025 Jp L・REN株式会社 All Rights Reserved.</p>
+  </div>
+</body>
+
+</html>

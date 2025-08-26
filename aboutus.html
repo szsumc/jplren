@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jp L・REN株式会社</title>
+  <style>
+    /* 重置默认样式，方便统一控制 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+      background-color: #F4F4F4;
+    }
+
+    /* 顶部导航及横幅区域，宽度100%，背景色按需求设置 */
+    .top-section {
+      width: 100%;
+      background-color: #18594A; /* 近似顶部绿色，可按需调整 */
+    }
+
+    .top-nav {
+      width: 960px; /* 假设内容宽度固定，可根据实际需求调整，实现居中 */
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+    }
+
+    .top-nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 15px;
+      display: inline-block;
+    }
+
+    .current{
+      border-bottom: 2px solid #D2D04F; /* 下划线样式，这里用金色示例 */
+    }
+
+    .banner {
+      width: 100%;
+      background-color: #F4F4F4; /* 横幅灰色背景 */
+      text-align: center;
+    }
+
+    /* 主体内容区域，居中显示 */
+    .content-wrapper {
+      width: 960px;
+      margin: 20px auto;
+      display: flex;
+    }
+
+    .sidebar {
+      width: 178px;
+      margin-right: 20px;
+    }
+
+    .sidebar .contact-box {
+      background-color: #fff;
+      border: 1px solid #666666;
+      margin-bottom: 20px;
+    }
+
+    .sidebar .contact-box p {
+      margin-bottom: 5px;
+    }
+
+    .side-top {
+      padding: 10px;
+      background-color: #18594A;
+      color: #fff;
+    }
+
+    .side-contents-top {
+      padding: 10px 0PX 0PX 10PX;
+   font-size: 21px;
+
+    }
+
+    .side-contents {
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    .contents-banner {
+      margin: 10px 0px 10px 0px;
+      padding: 5px 0px 5px 10px;
+      background-color: #D2D04F;
+    }
+
+
+    .main-div {
+      background-color: #ffffff; 
+     border-top: 2px solid #000;
+     border-top-color: #666666;
+     padding: 20px;
+    }
+
+    .main-content {
+      flex: 1;
+    }
+
+    .map-div {
+      margin: 20px 0px 0px 0px;
+      border: 1px solid #000;
+    }
+
+    .main-content h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .img-placeholder {
+      width: 100%;
+    }
+
+    .text-section {
+      margin-bottom: 20px;
+    }
+
+    .bottom-section {
+      width: 100%;
+      background-color: #18594A; /* 底部绿色背景，与顶部呼应 */
+      text-align: center;
+      padding: 10px 0;
+      color: #fff;
+      font-size: 12px;
+    }
+
+
+  .row {
+      display: flex;
+      gap: 10px;
+      width: 100%;
+  }
+  .col {
+      flex: 1;
+         padding: 10px 0;
+  }
+
+  table {
+      border-collapse: collapse;
+      width: 100%;
+  }
+  
+  td {
+      border: 1px solid #000;
+      padding: 8px;
+  }
+  
+  .first-column {
+      background-color: #F4F4F4;
+  }
+  
+  .merged-cell {
+      vertical-align: top;
+  }
+
+  </style>
+</head>
+
+<body>
+  <!-- 顶部区域 -->
+  <div class="top-section">
+    <div class="top-nav">
+            <img src="images/logo.jpg"/>
+      <a href="index.html">ホーム</a>
+      <a class="current" href="aboutus.html">会社概要</a>
+      <a href="business.html">業務紹介</a>
+      <a href="contact.html">お問い合わせ</a>
+    </div>
+    <div class="banner">
+      <div class="img-placeholder"><img src="images/banner1.jpg"/></div>
+    </div>
+  </div>
+
+  <!-- 主体内容区域 -->
+  <div class="content-wrapper">
+    <!-- 侧边栏 -->
+    <aside class="sidebar">
+      <div class="contact-box">
+        <div class="side-top">
+          <p>お問い合わせ</p>
+        </div>
+        <div class="side-contents-top">
+          <p>✆ 047-192-6728</p>
+        </div>
+        <div class="side-contents">
+          <p>〒272-854</p>
+          <p>千葉県栢市布瀬字原市 15-1
+(栢しょうなん夢ファーム前)</p></br>
+          <p>FAX 047-192-6729</p>
+          <p>携帯 080-1234-5678</p></br>
+          <p>受付時間 9:00～18:00（土日祝除く）</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 主要内容 -->
+    <main class="main-content">
+            <div class="main-top-div">
+        <h2>会社概要</h2>
+            </div>
+            <div class="main-div">
+
+              <table>
+                <tr>
+                  <td style="background-color: #CCCCCC;">会 社 名</td>
+                  <td>Jp L・Ren株式会社</td>
+                </tr>
+                <tr>
+                  <td style="background-color: #CCCCCC;">代表取締役</td>
+                  <td>謝 志雲</td>
+                </tr>
+                <tr>
+                  <td style="background-color: #CCCCCC;">資 本 金</td>
+                  <td>1,000万円</td>
+                </tr>
+                <tr>
+                  <td style="background-color: #CCCCCC;">設　　立</td>
+                  <td>平成30年11月</td>
+                </tr>
+                <tr>
+                  <td style="background-color: #CCCCCC;" rowspan="6">会社沿革</td>
+                  <td>平成30年11月　⇒ 岩槻配送センターを開設</td>
+                </tr>
+                <tr>
+                  <td>平成17年9月　⇒ 資本金300万円で有限会社を設立した</td>
+                </tr>
+                <tr>
+                  <td>平成19年7月　⇒ 土地（白井市木825－4）を購入し、工場を開設した</td>
+                </tr>
+                <tr>
+                  <td>平成19年8月　⇒ 本社を白井市木825－4に移転した</td>
+                </tr>
+                <tr>
+                  <td>平成19年11月　⇒ 株式会社に改組した</td>
+                </tr>
+                <tr>
+                  <td>平成19年11月　⇒ 資本金1,000万円に増資した</td>
+                </tr>
+                <tr>
+                  <td style="background-color: #CCCCCC;" rowspan="3">事 業 所</td>
+                  <td>本社　トラスト金属スクラップヤード</td>
+                </tr>
+                <tr>
+                  <td>〒272-854 千葉県栢市布瀬字原市 15-1 (栢しょうなん夢ファーム前)</td>
+                </tr>
+                <tr>
+
+                  <td>TEL：047-192-6728　　FAX：047-192-6729</td>
+                </tr>
+                <tr>
+                  <td style="background-color: #CCCCCC;" rowspan="2">営業内容</td>
+                  <td>高価買入・取引迅速・非鉄金属・販売</td>
+                </tr>
+                <tr>
+                  <td>業務解体・工場片付</td>
+                </tr>
+                <tr>
+                  <td style="background-color: #CCCCCC;" rowspan="2">取引銀行</td>
+                  <td>三菱東京UFJ銀行</td>
+                </tr>
+                <tr>
+                  <td>千葉信用金庫</td>
+                </tr>
+              </table>
+              
+            </div>
+    </main>
+  </div>
+
+  <!-- 底部区域 -->
+  <div class="bottom-section">
+    <p>Copyright © 2025 Jp L・REN株式会社 All Rights Reserved.</p>
+  </div>
+</body>
+
+</html>
