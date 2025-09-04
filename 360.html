@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>360 VR Viewer</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            width: 100vw;
+            height: 100vh;
+            background-color: #000;
+            font-family: sans-serif;
+            color: white;
+        }
+
+        canvas {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        window.onload = function() {
+            // --- Scene Setup ---
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            document.body.appendChild(renderer.domElement);
+
+            // Set up a simple message
+            const loadingText = document.createElement('div');
+            loadingText.textContent = 'Loading panorama...';
+            loadingText.style.position = 'absolute';
+            loadingText.style.top = '50%';
+            loadingText.style.left = '50%';
+            loadingText.style.transform = 'translate(-50%, -50%)';
+            loadingText.style.fontSize = '2rem';
+            loadingText.style.textAlign = 'center';
+            document.body.appendChild(loadingText);
+
+            // --- 360 Panorama Creation ---
+            const textureLoader = new THREE.TextureLoader();
+            // Set crossOrigin to anonymous to prevent CORS issues
+            textureLoader.crossOrigin = "anonymous";
+            // Updated panorama URL to a more stable public domain image
+            const panoramaUrl = 'https://szsumc.github.io/jplren/images/360.jpg';
+
+            textureLoader.load(panoramaUrl, (texture) => {
+                loadingText.style.display = 'none';
+
+                const geometry = new THREE.SphereGeometry(500, 60, 40);
+                geometry.scale(-1, 1, 1); // Flip the geometry inside out
+
+                const material = new THREE.MeshBasicMaterial({
+                    map: texture
+                });
+
+                const panorama = new THREE.Mesh(geometry, material);
+                scene.add(panorama);
+
+            }, undefined, (error) => {
+                console.error('An error occurred while loading the panorama texture:', error);
+                loadingText.textContent = 'Failed to load panorama. Please check the image URL.';
+            });
+
+            // --- Camera and Interaction ---
+            let isDragging = false;
+            let previousMousePosition = {
+                x: 0,
+                y: 0
+            };
+
+            window.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                previousMousePosition = {
+                    x: e.clientX,
+                    y: e.clientY
+                };
+            });
+
+            window.addEventListener('mouseup', () => {
+                isDragging = false;
+            });
+
+            window.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+
+                const deltaMove = {
+                    x: e.clientX - previousMousePosition.x,
+                    y: e.clientY - previousMousePosition.y
+                };
+
+                const panSpeed = 0.002;
+                camera.rotation.y -= deltaMove.x * panSpeed;
+                
+                // Clamp vertical rotation to prevent flipping
+                let verticalRotation = camera.rotation.x - deltaMove.y * panSpeed;
+                verticalRotation = Math.max(-Math.PI / 2, Math.min(Math.PI / 2, verticalRotation));
+                camera.rotation.x = verticalRotation;
+
+                previousMousePosition = {
+                    x: e.clientX,
+                    y: e.clientY
+                };
+            });
+
+            // Handle window resizing
+            window.addEventListener('resize', () => {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            });
+
+            // --- Animation Loop ---
+            const animate = () => {
+                requestAnimationFrame(animate);
+                renderer.render(scene, camera);
+            };
+
+            // Start the animation loop
+            animate();
+        };
+    </script>
+</body>
+</html>
